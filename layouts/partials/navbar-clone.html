@@ -55,7 +55,9 @@
         {{- if .sublinks }}
         <div class="navbar-item has-dropdown is-hoverable">
           <a class="navbar-link">
-            {{ .title }}
+            <a href="{{ .url }}" class="navbar-item">
+              {{ .title }}
+            </a>
           </a>
 
           <div class="navbar-dropdown">
