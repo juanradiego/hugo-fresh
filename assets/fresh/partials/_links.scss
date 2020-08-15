@@ -1,0 +1,25 @@
+/* ==========================================================================
+Links style
+========================================================================== */
+
+@import 'colors';
+
+/* unvisited link */
+a:link {
+    color: $primary;
+}
+
+/* visited link */
+a:visited {
+    color: $secondary;
+}
+
+/* mouse over link */
+a:hover {
+    color: hotpink;
+}
+
+/* selected link */
+a:active {
+    color: $bloody;
+} 
