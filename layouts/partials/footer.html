@@ -1,10 +1,11 @@
 {{- $footer      := .Site.Params.footer }}
+{{- $id := index $footer "id" }}
 {{- $logo        := index $footer "logo" }}
 {{- $quickLinks  := index $footer "quicklinks" }}
 {{- $socialMedia := index $footer "socialmedia" }}
 {{- $bulmaLogo   := index $footer "bulmalogo" }}
 {{- $socialMediaTitle    := index $footer "socialmediatitle" }}
-<footer class="footer footer-dark">
+<footer section class="footer footer-dark" id="{{ $id }}">
   <div class="container">
     <div class="columns">
       <div class="column">
