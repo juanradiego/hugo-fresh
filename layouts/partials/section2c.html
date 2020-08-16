@@ -2,7 +2,8 @@
 {{- $id := index $section2 "id" }}
 {{- $title    := index $section2 "title" }}
 {{- $subtitle := index $section2 "subtitle" }}
-{{- $features := index $section2 "features" }}
+{{- $column1  := index $section2 "column1" }}
+{{- $column2  := index $section2 "column2" }}
 <section class="section is-medium" id="{{ $id }}">
   <div class="container">
     <div class="columns">
@@ -11,8 +12,24 @@
         <h3 class="subtitle is-5 is-muted">{{ $subtitle }}</h3>
         <div class="divider"></div>
       </div>
-      <div class="column is-7 mt-60">
-        {{- range $features }}
+      <div class="column is-4 mt-60">
+        {{- range $column1 }}
+        <article class="media icon-box">
+          <div class="media-content mt-50">
+            <div class="content">
+              <p>
+                <a href={{ .link }}>
+                <span class="icon-box-title">{{ .title }}</span>
+                </a>
+                <span class="icon-box-text">{{ .text | markdownify }}</span>
+              </p>
+            </div>
+          </div>
+        </article>
+        {{- end }}
+      </div>
+      <div class="column is-4 mt-60">
+        {{- range $column2 }}
         <article class="media icon-box">
           <div class="media-content mt-50">
             <div class="content">
