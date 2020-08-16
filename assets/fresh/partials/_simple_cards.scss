@@ -7,7 +7,7 @@ Simple Card Styles
     overflow: hidden;
     margin: 10px auto;
     min-width: 220px;
-    max-width: 310px;
+    max-width: 320px;
     width: 100%;
     color: #333;
     box-shadow: none !important;
@@ -20,17 +20,18 @@ Simple Card Styles
         text-align: center;
         font-family: 'Open Sans', sans-serif;
         padding-top: 25px;
-        font-size: 1.4rem;
+        font-size: 1.2rem;
         font-weight: 800;
         color: $blue-grey;
+        padding-bottom: 10px;
     }
     scard {
-        text-align: left;
+        text-align: center;
         margin: 0;
         display: block;
         position: relative;
         background-color: $smoke-white;
-        padding: 30px 50px 65px 50px;
+        padding: 15px 50px 65px 50px;
         font-size: 1.2rem;
         font-weight: 400;
         margin: 0 0 -20px;
