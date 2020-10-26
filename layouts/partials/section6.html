@@ -1,6 +1,6 @@
 {{- $section6 := .Site.Params.section6 }}
 {{- $id := index $section6 "id" }}
-{{- $title := index $section6 "title" }}
+{{- $title    := index $section6 "title" }}
 {{- $subtitle := index $section6 "subtitle" }}
 {{- $clientLogos := index $section6 "clientlogos" }}
 <section class="section section-light-grey is-medium" id="{{ $id }}">
@@ -13,15 +13,13 @@
   <div class="hero-foot mb-20">
     <div class="container">
       <div class="tabs is-centered">
-        <ul>
           {{- range $clientLogos }}
           <li>
-            <a>
-              <img class="logo" src="{{ printf "/images/colaborations/%s" . | relURL }}">
+            <a href="{{ .link }}" target="_blank" rel="noopener noreferrer">
+              <img class="logo" src="{{ printf "/images/collaborations/%s" .logo | relURL }}">
             </a>
           </li>
           {{- end }}
-        </ul>
       </div>
     </div>
   </div>
