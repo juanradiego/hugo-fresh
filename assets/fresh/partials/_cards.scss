@@ -13,7 +13,7 @@ Cards and Card content styles
     margin: 0 auto;
     border-radius: 30px;
     .card-title h4 {
-        font-family: 'Open Sans', sans-serif;
+        font-family: $family-sans-serif-title, sans-serif;
         padding-top: 25px;
         font-size: 1.2rem;
         font-weight: 600;

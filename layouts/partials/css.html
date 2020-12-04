@@ -2,12 +2,19 @@
 {{- $sass         := "style.sass" }}
 {{- $cssTarget    := "css/style.css" }}
 {{- $cssOpts      := cond ($inServerMode) (dict "targetPath" $cssTarget "enableSourceMap" true) (dict "targetPath" $cssTarget "outputStyle" "compressed") }}
-{{- $fontName     := .Site.Params.font.name | default "Open Sans" }}
-{{- $fontFace     := replace $fontName " " "+" }}
-{{- $fontSizes    := delimit (.Site.Params.font.sizes | default (slice 300 400 600 700)) "," }}
-{{- $fontUrl      := printf "https://fonts.googleapis.com/css?family=%s:%s" $fontFace $fontSizes }}
-<link rel="icon" type="image/png" href="{{ "images/logo_mini.png" | relURL }}" />
-<link href="{{ $fontUrl }}" rel="stylesheet">
+{{ if .Site.Params.google_fonts }}
+  {{ $fonts := slice }}
+  {{- range .Site.Params.google_fonts }}
+    {{ $family := replace .family  " " "+" }}
+    {{ $weights := replace  .sizes  " " "" }}
+    {{ $string := print $family ":" $weights }}
+    {{ $fonts = $fonts | append $string }}
+  {{ end }}
+  {{ $url_part := (delimit $fonts "|") | safeHTMLAttr }}
+  <link {{ printf "href=\"//fonts.googleapis.com/css?family=%s\"" $url_part | safeHTMLAttr }} rel="stylesheet">
+{{ end }}
+
+
 {{- if $inServerMode }}
 {{- $css := resources.Get $sass | toCSS $cssOpts }}
 <link rel="stylesheet" type="text/css" href="{{ $css.RelPermalink }}">

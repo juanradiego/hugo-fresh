@@ -18,7 +18,7 @@ Simple Card Styles
     }
     .card-title h4 {
         text-align: center;
-        font-family: 'Open Sans', sans-serif;
+        font-family: $family-sans-serif-title, sans-serif;
         padding-top: 25px;
         font-size: 1.2rem;
         font-weight: 800;
