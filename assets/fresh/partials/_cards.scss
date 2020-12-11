@@ -12,6 +12,8 @@ Cards and Card content styles
     border-radius: 3px;
     margin: 0 auto;
     border-radius: 30px;
+    display: grid;
+    align-items: flex-start;
     .card-title h4 {
         font-family: $family-sans-serif-title, sans-serif;
         padding-top: 25px;
