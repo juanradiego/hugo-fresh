@@ -16,11 +16,11 @@ Section Styles
     &.section-half {
         height: 75vh !important;
     }
-    .title, .subtitle {
-        font-family: $family-sans-serif-body, sans-serif;
-
+    .title {
+        font-family: $family-sans-serif-title, sans-serif;
     }
     .subtitle {
+        font-family: $family-sans-serif-body, sans-serif;
         &.is-muted {
             color: $muted-grey;
         }
@@ -31,11 +31,13 @@ Section Styles
 .title-wrapper {
     max-width: 500px;
     margin: 0 auto;
-    .title, .subtitle {
+    .title {
         font-family: $family-sans-serif-title, sans-serif;
 
     }
     .subtitle {
+        font-family: $family-sans-serif-body, sans-serif;
+
         &.is-muted {
             color: $muted-grey;
         }
